@@ -22,3 +22,7 @@ video {
 #cat-image{
   display: block;
 }
+
+#text{
+  text-align: left;
+}
