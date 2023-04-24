@@ -23,6 +23,7 @@
     var catImage = document.getElementById("cat-image");
 
     catImage.addEventListener('click', function() {
+      catImage.style.display = "none";
       videoContainer.style.display = "block";
       video.muted = false;
       video.play();
