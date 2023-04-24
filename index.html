@@ -19,10 +19,11 @@
 
   <script>
     var video = document.getElementById("myVideo");
+    var videoContainer = document.querySelector(".video-container");
     var catImage = document.getElementById("cat-image");
 
     catImage.addEventListener('click', function() {
-      video.style.display = "block";
+      videoContainer.style.display = "block";
       video.muted = false;
       video.play();
     });
