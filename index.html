@@ -5,11 +5,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
   </head>
   <body>
+    <img id="cat-image" src="kitten.jpg">
     <div class="video-container">
-      <img src="kitten.jpg" alt="cat" onclick="playVideo()">
-      <video id="myVideo" autoplay loop muted>
+      <video id="myVideo" loop muted>
         <source src="screamer-video.mp4" type="video/mp4">
         Your browser does not support the video tag.
       </video>
@@ -17,11 +18,16 @@
   </body>
 
   <script>
-    function playVideo() {
-      var video = document.getElementById("myVideo");
+    var video = document.getElementById("myVideo");
+    var catImage = document.getElementById("cat-image");
+    video.style.display = "none";
+
+    catImage.addEventListener('click', function() {
+      video.style.display = "block";
       video.muted = false;
       video.play();
-    }
+    });
+
   </script>
 </html>
 
