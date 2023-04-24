@@ -23,6 +23,10 @@ video {
   display: block;
 }
 
-#text{
+.wrapper {
   text-align: left;
+}
+
+#text {
+  display: inline-block;
 }
