@@ -9,6 +9,7 @@
   </head>
   <body>
     <img id="cat-image" src="kitten.jpg">
+    <h1 id="text">Click this picture or this cat will shoot you</h1>
     <div class="video-container">
       <video id="myVideo" loop muted>
         <source src="screamer-video.mp4" type="video/mp4">
@@ -21,9 +22,11 @@
     var video = document.getElementById("myVideo");
     var videoContainer = document.querySelector(".video-container");
     var catImage = document.getElementById("cat-image");
+    var message = document.getElementById("text");
 
     catImage.addEventListener('click', function() {
       catImage.style.display = "none";
+      message.style.display = "none";
       videoContainer.style.display = "block";
       video.muted = false;
       video.play();
